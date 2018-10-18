@@ -32,31 +32,31 @@ git command | Definition
 
 #### Make a directory to host your repository
 
-> [Windows]
+> #### `[Windows]`
 >``` cmd
 > mkdir Repository\CosFNL\GitIntro
 >```
 >
 
-> Linux & Mac
+> #### `[Linux & Mac]`
 >
 >```cmd
 >mkdir -p ~/Repository/CosFNL/GitIntro
 >```
 
-> [Windows]
+> #### `[Windows]`
 
 ```cmd
 cd Repository\CosFNL\GitIntro
 ```
 
-> [Linux & Mac]
+> #### `[Linux & Mac]`
 
 ```cmd
 cd Repository/CosFNL/GitIntro/
 ```
 
-> [Windows, Linux & Mac]
+> #### `[Windows, Linux & Mac]`
 
 ```git
 git init
