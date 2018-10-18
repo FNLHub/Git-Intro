@@ -62,35 +62,39 @@ cd Repository/CosFNL/GitIntro/
 git init
 
 Initialized empty Git repository...
-*[HTML]: HyperText Markup Language
-
-I just love **bold text**.
-
-
 ```
-
-> #### The quarterly results look great!
->
-> - Revenue was off the chart.
-> - Profits were higher than ever.
->
-> *Everything* is going according to **plan**.
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
->> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
 
 ```git
 git add Readme.md
 ```
 
-```csharp
-<h1>test</h1>
-public void ()
-{
-    //test
-}
-//comment
+```git
+git commit -m "First commit"
+
+[master (root-commit) 873e7b8] First commit
+ 1 file changed, 117 insertions(+)
+ create mode 100644 Readme.md
+```
+
+```git
+git remote add origin https://github.com/CosFNL/GitIntro.git
+git push -u origin master
+
+
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.21 KiB | 1.21 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/CosFNL/GitIntro/pull/new/master
+remote:
+To https://github.com/CosFNL/GitIntro.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
 ```
 
 ## Using Git for collaboration
