@@ -1,6 +1,6 @@
 # GitIntro
 
-Signup for GitHub.com
+Sign-up for [GitHub.com](https://github.com/join?source=header-home)
 
 ## Create a repository (repo)
 [GitHub create a repo](https://help.github.com/articles/create-a-repo/)
