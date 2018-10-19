@@ -19,6 +19,9 @@ git command | Definition
 `add` | Add file contents to the index
 `status` | Show the working tree status
 `commit` | Record changes to the repository
+`fetch` | Download objects and refs from another repository
+`pull` | Fetch from and integrate with another repository or a local branch
+`push` | Update remote refs along with associated objects
 
 ### Command Prompt/Terminal
 
