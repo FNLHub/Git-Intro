@@ -33,6 +33,30 @@ git command | Definition
 >git config --global user.email you@yourdomain.example.com
 >```
 
+#### Saving your GitHub password with Git
+
+##### wincred (GUI)
+>[Windows]
+>```git
+>git config --global credential.helper wincred
+>```
+
+##### Cache 
+> [Windows, Linux & Mac]
+>Turn on the credential helper so that Git will save your password in memory for some time. 
+>By default, Git will cache your password for 15 minutes.
+># Set git to use the credential memory cache
+>
+>```git
+>git config --global credential.helper cache
+>```
+
+> To change the default password cache timeout
+># Set the cache to timeout after 1 hour (setting is in seconds):
+>```git
+>git config --global credential.helper 'cache --timeout=3600'
+>```
+
 #### Make a directory to host your repository
 
 > #### `[Windows]`
@@ -103,6 +127,9 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 ## Using Git for collaboration
 
 ## Git Download
+
+## Resources
+[Pro Git Book](https://git-scm.com/book/en/v2)
 
 ### Connect to **COS FNL** repository
 
