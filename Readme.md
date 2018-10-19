@@ -1,4 +1,4 @@
-# GitIntro
+# Introduction to Git
 
 Sign-up for [GitHub.com](https://github.com/join?source=header-home)
 
