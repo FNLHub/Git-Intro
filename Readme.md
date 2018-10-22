@@ -130,6 +130,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 ## Resources
 [Pro Git Book](https://git-scm.com/book/en/v2)
+[Git Notes For Professionals](https://books.goalkicker.com/GitBook/GitNotesForProfessionals.pdf)
 
 ### Connect to **COS FNL** repository
 
