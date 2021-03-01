@@ -148,15 +148,13 @@ https://github.com/CosFNL/GitIntro.git
 Paste the text below, substituting in your email address.
   ```shell
   $ ssh-keygen -t ed25519 -C "<em>your_email@example.com</em>"
-  ```
-  {% note %}
-
+  ```  
+  
   **Note:** If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
   ```shell
    $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
   ```
- {% endnote %}
- 
+  
 …or create a new repository on the command line
 echo "# GitIntro" >> README.md
 git init
