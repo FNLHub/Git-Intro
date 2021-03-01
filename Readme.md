@@ -137,6 +137,25 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 https://github.com/CosFNL/GitIntro.git
 
+## .ssh key
+
+[SSH Key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+[Add SSH Key to GitHub](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
+
+### Generating a new SSH key
+
+{% data reusables.command_line.open_the_multi_os_terminal %}
+Paste the text below, substituting in your {% data variables.product.product_name %} email address.
+  ```shell
+  $ ssh-keygen -t ed25519 -C "<em>your_email@example.com</em>"
+  ```
+  {% note %}
+
+  **Note:** If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
+  ```shell
+   $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+  ```
+ {% endnote %}
 …or create a new repository on the command line
 echo "# GitIntro" >> README.md
 git init
