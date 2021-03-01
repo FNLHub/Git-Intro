@@ -98,14 +98,14 @@ git add Readme.md
 ```git
 git commit -m "First commit"
 
-[master (root-commit) 873e7b8] First commit
+[main (root-commit) 873e7b8] First commit
  1 file changed, 117 insertions(+)
  create mode 100644 Readme.md
 ```
 
 ```git
 git remote add origin https://github.com/CosFNL/GitIntro.git
-git push -u origin master
+git push -u origin main
 
 
 Enumerating objects: 3, done.
@@ -115,12 +115,12 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 1.21 KiB | 1.21 MiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 remote:
-remote: Create a pull request for 'master' on GitHub by visiting:
-remote:      https://github.com/CosFNL/GitIntro/pull/new/master
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/CosFNL/GitIntro/pull/new/main
 remote:
 To https://github.com/CosFNL/GitIntro.git
- * [new branch]      master -> master
-Branch 'master' set up to track remote branch 'master' from 'origin'.
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
 
 ```
 
@@ -155,19 +155,11 @@ Paste the text below, substituting in your email address.
    $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
   ```
   
-…or create a new repository on the command line
-echo "# GitIntro" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/CosFNL/GitIntro.git
-git push -u origin master
-
-…or push an existing repository from the command line
-git remote add origin https://github.com/CosFNL/GitIntro.git
-git push -u origin master
-
-…or import code from another repository
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+### Make sure you're running PowerShell as an Administrator
+```powershell 
+Set-Service ssh-agent -StartupType Automatic
+Start-Service ssh-agent
+Get-Service ssh-agent
+```
 
 TODO: Finish this repo...
