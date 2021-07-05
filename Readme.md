@@ -162,4 +162,18 @@ Start-Service ssh-agent
 Get-Service ssh-agent
 ```
 
-TODO: Finish this repo...
+## Advanced Git commands
+### [Branching & Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+
+> #### `[Windows, Linux & Mac]`
+> This workflow is primary branching and merging to prevent code loss and help with development vs. production workflows.
+
+iss53 is the new branch we want to work with.
+```git 
+git checkout -b iss53
+``` 
+##### Shorthand for
+```git
+git branch iss53
+git checkout iss53
+```
