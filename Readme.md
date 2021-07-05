@@ -8,8 +8,8 @@ Sign-up for [GitHub.com](https://github.com/join?source=header-home)
 ## Basic Git commands
 
 ```git
-git
-git help tutorial
+> git
+> git help tutorial
 ```
 
 git command | Definition
@@ -29,8 +29,8 @@ git command | Definition
 
 > [Windows, Linux & Mac]
 >```git
->git config --global user.name "Your Name Comes Here"
->git config --global user.email you@yourdomain.example.com
+>> git config --global user.name "Your Name Comes Here"
+>> git config --global user.email you@yourdomain.example.com
 >```
 
 #### Saving your GitHub password with Git
@@ -38,7 +38,7 @@ git command | Definition
 ##### wincred (GUI)
 >[Windows]
 >```git
->git config --global credential.helper wincred
+>> git config --global credential.helper wincred
 >```
 
 ##### Cache 
@@ -48,55 +48,55 @@ git command | Definition
 ># Set git to use the credential memory cache
 >
 >```git
->git config --global credential.helper cache
+>> git config --global credential.helper cache
 >```
 
 > To change the default password cache timeout
 ># Set the cache to timeout after 1 hour (setting is in seconds):
 >```git
->git config --global credential.helper 'cache --timeout=3600'
+>> git config --global credential.helper 'cache --timeout=3600'
 >```
 
 #### Make a directory to host your repository
 
 > #### `[Windows]`
 >``` cmd
-> mkdir Repository\CosFNL\GitIntro
+>> mkdir Repository\CosFNL\GitIntro
 >```
 >
 
 > #### `[Linux & Mac]`
 >
 >```cmd
->mkdir -p ~/Repository/CosFNL/GitIntro
+>> mkdir -p ~/Repository/CosFNL/GitIntro
 >```
 
 > #### `[Windows]`
 
 ```cmd
-cd Repository\CosFNL\GitIntro
+> cd Repository\CosFNL\GitIntro
 ```
 
 > #### `[Linux & Mac]`
 
 ```cmd
-cd Repository/CosFNL/GitIntro/
+> cd Repository/CosFNL/GitIntro/
 ```
 
 > #### `[Windows, Linux & Mac]`
 
 ```git
-git init
+> git init
 
 Initialized empty Git repository...
 ```
 
 ```git
-git add Readme.md
+> git add Readme.md
 ```
 
 ```git
-git commit -m "First commit"
+> git commit -m "First commit"
 
 [main (root-commit) 873e7b8] First commit
  1 file changed, 117 insertions(+)
@@ -104,8 +104,8 @@ git commit -m "First commit"
 ```
 
 ```git
-git remote add origin https://github.com/CosFNL/GitIntro.git
-git push -u origin main
+> git remote add origin https://github.com/CosFNL/GitIntro.git
+> git push -u origin main
 
 
 Enumerating objects: 3, done.
@@ -160,6 +160,103 @@ Paste the text below, substituting in your email address.
 Set-Service ssh-agent -StartupType Automatic
 Start-Service ssh-agent
 Get-Service ssh-agent
+```
+
+## Advanced Git commands
+### [Branching & Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+
+> #### `[Windows, Linux & Mac]`
+> This workflow is primary branching and merging to prevent code loss and help with development vs. production workflows.
+
+iss53 is the new branch we want to work with.
+```git 
+> git checkout -b iss53
+``` 
+##### Shorthand for
+```git
+> git branch iss53
+> git checkout iss53
+```
+
+Make your changes to the file and commit them.
+
+```git
+> git commit -a -m 'Finish making x change'
+```
+
+Merge the changes back to main branch
+
+```git
+> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+> git merge iss53
+Updating e46f478..20c8f8b
+Fast-forward
+ Readme.md | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+ ```
+
+ ```git
+ git branch -d iss53
+ ```
+
+### [Reset/Revert](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified)
+If you made a mistake and need to revert to the previous commit.
+Avoid doing HARD reset and always create a new branch when working on a project to prevent major issues.
+
+git command | Definition
+--- | ---
+[`log`](https://www.git-scm.com/docs/git-log) | Show commit logs
+[`reflog`](https://git-scm.com/docs/git-reflog) | Manage reflog (reference logs) information
+[`reset`](https://git-scm.com/docs/git-reset) | Reset current HEAD to the specified state
+
+### Command Prompt/Terminal
+
+#### reflog - referance logs
+The reflog will list the reference commit headers, which will use to revert or reset the project.
+
+
+> #### `[Windows, Linux & Mac]`
+> Show the HEAD logs with one line with basic graph pointers. Play around with the various options to see what suits your workflow.
+
+```git
+git log --oneline --graph
+```
+
+Git reset options
+
+ git reset options | Definition
+--- | ---
+`--soft` | Does not touch the index file or the working tree at all (but resets the head to \<commit>, just like all modes do). This leaves all your changed files "Changes to be committed", as git status would put it.
+`--mix` | Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action.
+`--hard` | Resets the index and working tree. Any changes to tracked files in the working tree since \<commit> are discarded.
+
+Git HEAD - ref that points to the tip (latest commit) of a branch.
+
+ Git hard Reset HEAD
+```git
+git reset --hard HEAD       (going back to HEAD)
+git reset --hard HEAD^      (going back to the commit before HEAD)
+git reset --hard HEAD~1     (equivalent to "^")
+git reset --hard HEAD~2     (going back two commits before HEAD)
+```
+
+#### Example
+Let's revert to a particular HEAD ref of f6e5064 from our current head 3303307.
+
+```git
+git reset --hard f6e5064
+```
+
+### NOTE: Git only garbage collects after a month (by default). So you can recover your files if a --hard reset was done on the same machine.
+
+#### Example
+We lost files from f6e5064 due to hard reset. Going back to 3303307
+
+```git
+git reset --hard 3303307
 ```
 
 TODO: Finish this repo...
