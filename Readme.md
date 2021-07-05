@@ -8,8 +8,8 @@ Sign-up for [GitHub.com](https://github.com/join?source=header-home)
 ## Basic Git commands
 
 ```git
-git
-git help tutorial
+> git
+> git help tutorial
 ```
 
 git command | Definition
@@ -29,8 +29,8 @@ git command | Definition
 
 > [Windows, Linux & Mac]
 >```git
->git config --global user.name "Your Name Comes Here"
->git config --global user.email you@yourdomain.example.com
+>> git config --global user.name "Your Name Comes Here"
+>> git config --global user.email you@yourdomain.example.com
 >```
 
 #### Saving your GitHub password with Git
@@ -38,7 +38,7 @@ git command | Definition
 ##### wincred (GUI)
 >[Windows]
 >```git
->git config --global credential.helper wincred
+>> git config --global credential.helper wincred
 >```
 
 ##### Cache 
@@ -48,55 +48,55 @@ git command | Definition
 ># Set git to use the credential memory cache
 >
 >```git
->git config --global credential.helper cache
+>> git config --global credential.helper cache
 >```
 
 > To change the default password cache timeout
 ># Set the cache to timeout after 1 hour (setting is in seconds):
 >```git
->git config --global credential.helper 'cache --timeout=3600'
+>> git config --global credential.helper 'cache --timeout=3600'
 >```
 
 #### Make a directory to host your repository
 
 > #### `[Windows]`
 >``` cmd
-> mkdir Repository\CosFNL\GitIntro
+>> mkdir Repository\CosFNL\GitIntro
 >```
 >
 
 > #### `[Linux & Mac]`
 >
 >```cmd
->mkdir -p ~/Repository/CosFNL/GitIntro
+>> mkdir -p ~/Repository/CosFNL/GitIntro
 >```
 
 > #### `[Windows]`
 
 ```cmd
-cd Repository\CosFNL\GitIntro
+> cd Repository\CosFNL\GitIntro
 ```
 
 > #### `[Linux & Mac]`
 
 ```cmd
-cd Repository/CosFNL/GitIntro/
+> cd Repository/CosFNL/GitIntro/
 ```
 
 > #### `[Windows, Linux & Mac]`
 
 ```git
-git init
+> git init
 
 Initialized empty Git repository...
 ```
 
 ```git
-git add Readme.md
+> git add Readme.md
 ```
 
 ```git
-git commit -m "First commit"
+> git commit -m "First commit"
 
 [main (root-commit) 873e7b8] First commit
  1 file changed, 117 insertions(+)
@@ -104,8 +104,8 @@ git commit -m "First commit"
 ```
 
 ```git
-git remote add origin https://github.com/CosFNL/GitIntro.git
-git push -u origin main
+> git remote add origin https://github.com/CosFNL/GitIntro.git
+> git push -u origin main
 
 
 Enumerating objects: 3, done.
@@ -170,10 +170,30 @@ Get-Service ssh-agent
 
 iss53 is the new branch we want to work with.
 ```git 
-git checkout -b iss53
+> git checkout -b iss53
 ``` 
 ##### Shorthand for
 ```git
-git branch iss53
-git checkout iss53
+> git branch iss53
+> git checkout iss53
 ```
+
+Make your changes to the file and commit them.
+
+```git
+> git commit -a -m 'Finish making x change'
+```
+
+Merge the changes back to main branch
+
+```git
+> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+> git merge iss53
+Updating e46f478..20c8f8b
+Fast-forward
+ Readme.md | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+ ```
