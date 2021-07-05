@@ -203,19 +203,19 @@ Fast-forward
  ```
 
 ### [Reset/Revert](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified)
-If you made a mistake and need to revert to previous commit.
-Avoid doing hard reset and always create a new branch when working on a project to prevent major issues.
+If you made a mistake and need to revert to the previous commit.
+Avoid doing HARD reset and always create a new branch when working on a project to prevent major issues.
 
 git command | Definition
 --- | ---
 [`log`](https://www.git-scm.com/docs/git-log) | Show commit logs
-[`reflog`](https://git-scm.com/docs/git-reflog) | Manage reflog (referance logs) information
+[`reflog`](https://git-scm.com/docs/git-reflog) | Manage reflog (reference logs) information
 [`reset`](https://git-scm.com/docs/git-reset) | Reset current HEAD to the specified state
 
 ### Command Prompt/Terminal
 
 #### reflog - referance logs
-This will list out the referance commit headers which will be used to revert or reset the project to.
+The reflog will list the reference commit headers, which will use to revert or reset the project.
 
 
 > #### `[Windows, Linux & Mac]`
