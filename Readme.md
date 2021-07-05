@@ -198,7 +198,11 @@ Fast-forward
  1 file changed, 15 insertions(+), 1 deletion(-)
  ```
 
-### Reset/Revert
+ ```git
+ git branch -d iss53
+ ```
+
+### [Reset/Revert](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified)
 If you made a mistake and need to revert to previous commit.
 Avoid doing hard reset and always create a new branch when working on a project to prevent major issues.
 
