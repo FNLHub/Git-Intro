@@ -197,3 +197,62 @@ Fast-forward
  Readme.md | 16 +++++++++++++++-
  1 file changed, 15 insertions(+), 1 deletion(-)
  ```
+
+### Reset/Revert
+If you made a mistake and need to revert to previous commit.
+Avoid doing hard reset and always create a new branch when working on a project to prevent major issues.
+
+git command | Definition
+--- | ---
+[`log`](https://www.git-scm.com/docs/git-log) | Show commit logs
+[`reflog`](https://git-scm.com/docs/git-reflog) | Manage reflog (referance logs) information
+[`reset`](https://git-scm.com/docs/git-reset) | Reset current HEAD to the specified state
+
+### Command Prompt/Terminal
+
+#### reflog - referance logs
+This will list out the referance commit headers which will be used to revert or reset the project to.
+
+
+> #### `[Windows, Linux & Mac]`
+> Show the HEAD logs with one line with basic graph pointers. Play around with the various options to see what suits your workflow.
+
+```git
+git log --oneline --graph
+```
+
+Git reset options
+
+ git reset options | Definition
+--- | ---
+`--soft` | Does not touch the index file or the working tree at all (but resets the head to \<commit>, just like all modes do). This leaves all your changed files "Changes to be committed", as git status would put it.
+`--mix` | Resets the index but not the working tree (i.e., the changed files are preserved but not marked for commit) and reports what has not been updated. This is the default action.
+`--hard` | Resets the index and working tree. Any changes to tracked files in the working tree since \<commit> are discarded.
+
+Git HEAD - ref that points to the tip (latest commit) of a branch.
+
+ Git hard Reset HEAD
+```git
+git reset --hard HEAD       (going back to HEAD)
+git reset --hard HEAD^      (going back to the commit before HEAD)
+git reset --hard HEAD~1     (equivalent to "^")
+git reset --hard HEAD~2     (going back two commits before HEAD)
+```
+
+#### Example
+Let's revert to a particular HEAD ref of f6e5064 from our current head 3303307.
+
+```git
+git reset --hard f6e5064
+```
+
+### NOTE: Git only garbage collects after a month (by default). So you can recover your files if a --hard reset was done on the same machine.
+
+#### Example
+We lost files from f6e5064 due to hard reset. Going back to 3303307
+
+```git
+git reset --hard 3303307
+```
+
+TODO: Finish this repo...
