@@ -53,8 +53,16 @@ pub   rsa4096 2021-09-22 [SC]
 uid                      Your_Name (My computer description) <github_Email>
 ```
 
+Configure git to use GPG
+
 ```cmd
 git config --global user.signingkey XXXXXXXXXXXXX012
+```
+
+Git has it's own version (windows for now) of GPG so set it to use the correct version.
+
+```cmd
+git config --global gpg.program "C:/Program Files (x86)/GnuPG/bin/gpg.exe"
 ```
 
 ```cmd
@@ -95,10 +103,4 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 AAAAA
 -----END PGP PUBLIC KEY BLOCK-----
-```
-
-Configure git to use GPG
-
-```cmd
-git config --global user.signingkey XXXXXXXXXXXXX012
 ```
