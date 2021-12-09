@@ -56,7 +56,7 @@ uid                      Your_Name (My computer description) <github_Email>
 Configure git to use GPG
 
 ```cmd
-git config --global user.signingkey XXXXXXXXXXXXX012
+git config --global user.signingkey YYYYYYYYYYYYYYYYYYYYYYYYXXXXXXXXXXXXX012
 ```
 
 Git has it's own version (windows for now) of GPG so set it to use the correct version.
@@ -70,7 +70,7 @@ gpg --list-secret-keys --keyid-format=long
 ```
 
 ```cmd
-gpg --armor --export XXXXXXXXXXXXX012
+gpg --armor --export YYYYYYYYYYYYYYYYYYYYYYYYXXXXXXXXXXXXX012
 ```
 Key to copy to github GPG
 ```cmd
