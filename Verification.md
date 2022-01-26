@@ -104,3 +104,15 @@ ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
 AAAAA
 -----END PGP PUBLIC KEY BLOCK-----
 ```
+
+## Configure git commits to sign
+
+```cmd
+git config --global commit.gpgsign true
+```
+
+### Sign your git commit
+
+```cmd
+git commit -S -m "your commit message"
+```
