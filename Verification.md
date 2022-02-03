@@ -61,8 +61,14 @@ git config --global user.signingkey AAAAAAAAABBBBBBB
 
 Git has it's own version (windows for now) of GPG so set it to use the correct version.
 
+## Windows
 ```cmd
 git config --global gpg.program "C:/Program Files (x86)/GnuPG/bin/gpg.exe"
+```
+
+## Linux (WSL)
+```cmd
+git config --global gpg.program gpg
 ```
 
 ```cmd
