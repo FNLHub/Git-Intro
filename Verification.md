@@ -129,7 +129,7 @@ git commit -S -m "your commit message"
 Add the following to your shell:  `~/.bashrc`, `~/.zshrc`, etc.
 
 ```bash
-# enable passphrase prompt for gpg
-export GPG_TTY=$TTY
+# Enable passphrase prompt for gpg - export GPG_TTY=$TTY - might be better on some systems.
+export GPG_TTY=$(tty)
 echo "test" | gpg --clearsign > /dev/null 2>&1
 ```
