@@ -48,7 +48,7 @@ public and secret key created and signed.
 
 Note that this key cannot be used for encryption.  You may want to use
 the command "--edit-key" to generate a subkey for this purpose.
-pub   rsa4096 2021-09-22 [SC]
+pub   rsa4096/AAAAAAAAABBBBBBB 2021-09-22 [SC]
       YYYYYYYYYYYYYYYYYYYYYYYYXXXXXXXXXXXXX012
 uid                      Your_Name (My computer description) <github_Email>
 ```
@@ -56,7 +56,7 @@ uid                      Your_Name (My computer description) <github_Email>
 Configure git to use GPG
 
 ```cmd
-git config --global user.signingkey YYYYYYYYYYYYYYYYYYYYYYYYXXXXXXXXXXXXX012
+git config --global user.signingkey AAAAAAAAABBBBBBB
 ```
 
 Git has it's own version (windows for now) of GPG so set it to use the correct version.
@@ -68,6 +68,7 @@ git config --global gpg.program "C:/Program Files (x86)/GnuPG/bin/gpg.exe"
 ```cmd
 gpg --list-secret-keys --keyid-format=long
 ```
+```cmd
 
 ```cmd
 gpg --armor --export YYYYYYYYYYYYYYYYYYYYYYYYXXXXXXXXXXXXX012
@@ -115,4 +116,12 @@ git config --global commit.gpgsign true
 
 ```cmd
 git commit -S -m "your commit message"
+```
+
+## WSL 
+
+Add the follwoing to the ~/.bashrc (~/.zshrc or whatever shell)
+```cmd
+# enable passphrase prompt for gpg
+export GPG_TTY=$(tty)
 ```
