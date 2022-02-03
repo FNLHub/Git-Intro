@@ -120,8 +120,9 @@ git commit -S -m "your commit message"
 
 ## WSL 
 
-Add the follwoing to the ~/.bashrc (~/.zshrc or whatever shell)
-```cmd
+Add the following to your shell:  `~/.bashrc`, `~/.zshrc`, etc.
+
+```bash
 # enable passphrase prompt for gpg
 export GPG_TTY=$(tty)
 ```
