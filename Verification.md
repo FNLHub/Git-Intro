@@ -130,5 +130,6 @@ Add the following to your shell:  `~/.bashrc`, `~/.zshrc`, etc.
 
 ```bash
 # enable passphrase prompt for gpg
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
+echo "test" | gpg --clearsign > /dev/null 2>&1
 ```
