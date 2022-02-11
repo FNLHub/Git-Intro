@@ -33,6 +33,12 @@ git command | Definition
 >> git config --global user.email you@yourdomain.example.com
 >```
 
+##### Make VsCode default editor
+> [Windows/WSL, Linux & Mac]
+> ```git
+>> git config --global core.editor "code --wait"
+>```
+
 #### Saving your GitHub password with Git
 
 ##### wincred (GUI)
