@@ -74,11 +74,11 @@ git config --global gpg.program gpg
 ```cmd
 gpg --list-secret-keys --keyid-format=long
 ```
-```cmd
 
 ```cmd
 gpg --armor --export YYYYYYYYYYYYYYYYYYYYYYYYXXXXXXXXXXXXX012
 ```
+
 Key to copy to github GPG
 ```cmd
 -----BEGIN PGP PUBLIC KEY BLOCK-----
