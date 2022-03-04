@@ -28,9 +28,11 @@ git command | Definition
 #### Configure Git
 
 > [Windows, Linux & Mac]
+> 
+> Highly suggest to keep your email private and use the one GitHub provides you.
 >```git
 >> git config --global user.name "Your Name Comes Here"
->> git config --global user.email you@yourdomain.example.com
+>> git config --global user.email you@users.noreply.github.com
 >```
 
 ##### Make VsCode default editor
@@ -49,6 +51,7 @@ git command | Definition
 
 ##### Cache 
 > [Windows, Linux & Mac]
+> 
 >Turn on the credential helper so that Git will save your password in memory for some time. 
 >By default, Git will cache your password for 15 minutes.
 ># Set git to use the credential memory cache
