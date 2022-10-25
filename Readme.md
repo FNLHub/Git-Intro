@@ -31,8 +31,8 @@ git command | Definition
 > 
 > Highly suggest to keep your email private and use the one GitHub provides you.
 >```git
->> git config --global user.name "Your Name Comes Here"
->> git config --global user.email you@users.noreply.github.com
+> git config --global user.name "Your Name Comes Here"
+> git config --global user.email you@users.noreply.github.com
 >```
 
 ##### Make VsCode default editor
