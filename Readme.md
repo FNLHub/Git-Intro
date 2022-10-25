@@ -37,8 +37,8 @@ git command | Definition
 
 ##### Make VsCode default editor
 > [Windows/WSL, Linux & Mac]
-> ```git
->> git config --global core.editor "code --wait"
+>```git
+> git config --global core.editor "code --wait"
 >```
 
 #### Saving your GitHub password with Git
@@ -46,7 +46,7 @@ git command | Definition
 ##### wincred (GUI)
 >[Windows]
 >```git
->> git config --global credential.helper wincred
+> git config --global credential.helper wincred
 >```
 
 ##### Cache 
@@ -57,90 +57,86 @@ git command | Definition
 ># Set git to use the credential memory cache
 >
 >```git
->> git config --global credential.helper cache
+> git config --global credential.helper cache
 >```
 
 > To change the default password cache timeout
 ># Set the cache to timeout after 1 hour (setting is in seconds):
 >```git
->> git config --global credential.helper 'cache --timeout=3600'
+> git config --global credential.helper 'cache --timeout=3600'
 >```
 
 #### Make a directory to host your repository
 
 > #### `[Windows]`
 >``` cmd
->> mkdir Repository\CosFNL\GitIntro
+> mkdir Repository\CosFNL\GitIntro
 >```
 >
 
 > #### `[Linux & Mac]`
 >
 >```cmd
->> mkdir -p ~/Repository/CosFNL/GitIntro
+> mkdir -p ~/Repository/CosFNL/GitIntro
 >```
 
 > #### `[Windows]`
-
-```cmd
+>```cmd
 > cd Repository\CosFNL\GitIntro
-```
+>```
 
 > #### `[Linux & Mac]`
-
-```cmd
+>
+>```cmd
 > cd Repository/CosFNL/GitIntro/
-```
+>```
 
 > #### `[Windows, Linux & Mac]`
-
-```git
+>
+>```git
 > git init
-
-Initialized empty Git repository...
-```
-
-```git
+>```
+>Initialized empty Git repository...
+>
+>```git
 > git add Readme.md
-```
-
-```git
+>```
+>
+>```git
 > git commit -m "First commit"
-
-[main (root-commit) 873e7b8] First commit
- 1 file changed, 117 insertions(+)
- create mode 100644 Readme.md
-```
-
-```git
+>```
+>```
+>[main (root-commit) 873e7b8] First commit
+> 1 file changed, 117 insertions(+)
+> create mode 100644 Readme.md
+>```
+>```git
 > git remote add origin https://github.com/CosFNL/GitIntro.git
 > git push -u origin main
-
-
-Enumerating objects: 3, done.
-Counting objects: 100% (3/3), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 1.21 KiB | 1.21 MiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-remote:
-remote: Create a pull request for 'main' on GitHub by visiting:
-remote:      https://github.com/CosFNL/GitIntro/pull/new/main
-remote:
-To https://github.com/CosFNL/GitIntro.git
- * [new branch]      main -> main
-Branch 'main' set up to track remote branch 'main' from 'origin'.
-
-```
+>```
+>```
+>Enumerating objects: 3, done.
+>Counting objects: 100% (3/3), done.
+>Delta compression using up to 8 threads
+>Compressing objects: 100% (2/2), done.
+>Writing objects: 100% (3/3), 1.21 KiB | 1.21 MiB/s, done.
+>Total 3 (delta 0), reused 0 (delta 0)
+>remote:
+>remote: Create a pull request for 'main' on GitHub by visiting:
+>remote:      https://github.com/CosFNL/GitIntro/pull/new/main
+>remote:
+>To https://github.com/CosFNL/GitIntro.git
+> * [new branch]      main -> main
+>Branch 'main' set up to track remote branch 'main' from 'origin'.
+>```
 
 ## Using Git for collaboration
 
 ## Git Download
 
-## Resources
-[Pro Git Book](https://git-scm.com/book/en/v2)
-
-[Git Notes For Professionals](https://books.goalkicker.com/GitBook/GitNotesForProfessionals.pdf)
+## ⭐Resources
+- [Pro Git Book](https://git-scm.com/book/en/v2)
+- [Git Notes For Professionals](https://books.goalkicker.com/GitBook/GitNotesForProfessionals.pdf)
 
 ### Connect to **COS FNL** repository
 
@@ -156,12 +152,12 @@ https://github.com/CosFNL/GitIntro.git
 
 Paste the text below, substituting in your email address.
   ```shell
-  $ ssh-keygen -t ed25519 -C "<em>your_email@example.com</em>"
+  ssh-keygen -t ed25519 -C "<em>your_email@example.com</em>"
   ```  
   
   **Note:** If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
   ```shell
-   $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
   ```
   
 ### Make sure you're running PowerShell as an Administrator
@@ -177,39 +173,46 @@ Get-Service ssh-agent
 > #### `[Windows, Linux & Mac]`
 > This workflow is primary branching and merging to prevent code loss and help with development vs. production workflows.
 
-iss53 is the new branch we want to work with.
-```git 
-> git checkout -b iss53
-``` 
-##### Shorthand for
-```git
+>iss53 is the new branch we want to work with.
+>```git 
+>git checkout -b iss53
+>``` 
+
+>##### Shorthand for
+>```git
 > git branch iss53
 > git checkout iss53
-```
+>```
 
-Make your changes to the file and commit them.
-
-```git
+>Make your changes to the file and commit them.
+>
+>```git
 > git commit -a -m 'Finish making x change'
-```
+>```
 
-Merge the changes back to main branch
-
-```git
+>Merge the changes back to main branch
+>
+>```git
 > git checkout main
-Switched to branch 'main'
-Your branch is up to date with 'origin/main'.
-
+>```
+>```
+>Switched to branch 'main'
+>Your branch is up to date with 'origin/main'.
+>```
+>```
 > git merge iss53
-Updating e46f478..20c8f8b
-Fast-forward
- Readme.md | 16 +++++++++++++++-
- 1 file changed, 15 insertions(+), 1 deletion(-)
- ```
-
- ```git
- git branch -d iss53
- ```
+>```
+>```
+>Updating e46f478..20c8f8b
+>Fast-forward
+> Readme.md | 16 +++++++++++++++-
+> 1 file changed, 15 insertions(+), 1 deletion(-)
+> ```
+>
+> Delete iss53 branch
+> ```git
+> git branch -d iss53
+> ```
 
 ### [Reset/Revert](https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified)
 If you made a mistake and need to revert to the previous commit.
@@ -229,10 +232,10 @@ The reflog will list the reference commit headers, which will use to revert or r
 
 > #### `[Windows, Linux & Mac]`
 > Show the HEAD logs with one line with basic graph pointers. Play around with the various options to see what suits your workflow.
-
-```git
-git log --oneline --graph
-```
+>
+>```git
+>git log --oneline --graph
+>```
 
 Git reset options
 
@@ -244,28 +247,39 @@ Git reset options
 
 Git HEAD - ref that points to the tip (latest commit) of a branch.
 
- Git hard Reset HEAD
-```git
-git reset --hard HEAD       (going back to HEAD)
-git reset --hard HEAD^      (going back to the commit before HEAD)
-git reset --hard HEAD~1     (equivalent to "^")
-git reset --hard HEAD~2     (going back two commits before HEAD)
-```
+>  Git hard Reset HEAD Options
+>
+> (Going back to HEAD)
+> ```git
+> git reset --hard HEAD
+>```
+> (Going back to the commit before > HEAD)
+>```git
+> git reset --hard HEAD^
+>```
+>(Equivalent to "^")
+>```git
+> git reset --hard HEAD~1
+>```
+>(Going back two commits before HEAD)
+>```git
+> git reset --hard HEAD~2
+> ```
 
 #### Example
-Let's revert to a particular HEAD ref of f6e5064 from our current head 3303307.
-
-```git
-git reset --hard f6e5064
-```
+>Let's revert to a particular HEAD ref of f6e5064 from our current head 3303307.
+>
+>```git
+>git reset --hard f6e5064
+>```
 
 ### NOTE: Git only garbage collects after a month (by default). So you can recover your files if a --hard reset was done on the same machine.
 
 #### Example
-We lost files from f6e5064 due to hard reset. Going back to 3303307
-
-```git
-git reset --hard 3303307
-```
+>We lost files from f6e5064 due to hard reset. Going back to >3303307
+>
+>```git
+>git reset --hard 3303307
+>```
 
 TODO: Finish this repo...
