@@ -7,10 +7,13 @@ Sign-up for [GitHub.com](https://github.com/join?source=header-home)
 
 ## Basic Git commands
 
-```git
+> [Windows, Linux & Mac]
+>```
 > git
+>```
+>```
 > git help tutorial
-```
+>```
 
 git command | Definition
 --- | ---
