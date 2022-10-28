@@ -2,6 +2,10 @@
 
 ## Added .gitignore after the fact
 
+> [NOTE]
+> 
+> This does not remove the files from history or previous commits to the repository like GitHub.
+
 For the files already committed to a remote git repository, you’ll need to unstage them, create a new commit and push to your remote git repository.
 
 > [Windows, Linux & Mac] 
