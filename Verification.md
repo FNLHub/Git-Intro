@@ -131,5 +131,23 @@ Add the following to your shell:  `~/.bashrc`, `~/.zshrc`, etc.
 ```bash
 # Enable passphrase prompt for gpg - export GPG_TTY=$TTY - might be better on some systems.
 export GPG_TTY=$(tty)
-echo "test" | gpg --clearsign > /dev/null 2>&1
+echo "GPG Login" | gpg --clearsign > /dev/null 2>&1
 ```
+
+> [Windows] GUI - Append the windows pinentry.exe to WSL via CLI
+>
+>```bash
+> echo -e "# GPG4Win\npinentry-program \"/mnt/c/Program Files (x86)/gnupg/bin/pinentry-basic.exe\"\n\n# Newer version of Gpg4win\n# pinentry-program \"/mnt/c/Program Files (x86)/Gpg4win/bin/pinentry.exe\"" >> ~/.gnupg/gpg-agent.conf
+>```
+
+### Or
+
+> [~/.gnupg/gpg-agent.conf] - modify the file and add the following
+>
+>```
+># GPG4Win
+>pinentry-program "/mnt/c/Program Files (x86)/gnupg/bin/pinentry-basic.exe"
+>
+># Newer version of Gpg4win
+># pinentry-program "/mnt/c/Program Files (x86)/Gpg4win/bin/pinentry.exe"
+>```
