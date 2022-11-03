@@ -2,7 +2,7 @@
 
 ## Sync with Remote from fork
 
-> [Windows, Linux & Mac]
+> [Windows, Linux or Mac]
 >```
 > git remote add FNLHub https://github.com/FNLHub/Git-Intro.git
 >```
